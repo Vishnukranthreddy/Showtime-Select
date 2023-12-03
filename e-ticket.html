@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticket</title>
+    <link rel="stylesheet" type="text/css" href="css/e-ticket.css">
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img\sslogo.jpg">
+
+</head>
+<style>
+    *{
+        text-align: center;
+      }
+      .ticket-body {
+        background-color: var(--theme-bg);
+        font-family: "Yanone Kaffeesatz", sans-serif;
+        /* font-weight: 600; */
+      }
+      
+      img {
+        max-width: 480px;
+        height: 240px;
+      }
+      
+      .ticket {
+        width: 400px;
+        height: 775px;
+        background-color: rgb(243, 235, 235);
+        margin: 20px auto;
+        position: relative;
+      }
+      
+      .holes-top {
+        height: 50px;
+        width: 50px;
+        background-color: var(--theme-bg);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        margin-left: -25px;
+        top: -25px;
+      }
+      
+      .holes-top:before,
+      .holes-top:after {
+        content: "";
+        height: 50px;
+        width: 50px;
+        background-color: var(--theme-bg);
+        position: absolute;
+        border-radius: 50%;
+      }
+      
+      .holes-top:before {
+        left: -200px;
+      }
+      
+      .holes-top:after {
+        left: 200px;
+      }
+      
+      .holes-lower {
+        position: relative;
+        margin-right: 25px;
+        margin-left: 25px;
+        border: 1px dashed var(--theme-bg);
+      }
+      
+      .holes-lower:before,
+      .holes-lower:after {
+        content: "";
+        height: 50px;
+        width: 50px;
+        background-color: var(--theme-bg);
+        position: absolute;
+        border-radius: 50%;
+      }
+      
+      .holes-lower:before {
+        top: -25px;
+        left: -50px;
+      }
+      
+      .holes-lower:after {
+        top: -25px;
+        left: 350px;
+      }
+      
+      .title {
+        padding: 50px 25px 10px;
+      }
+      
+      .cinema {
+        color: black;
+        font-size: 40px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      
+      .movie-title {
+        font-size: 1.2rem;
+      }
+      
+      .info {
+        margin-left:95px ;
+        font-size: 15px;
+      }
+      
+      .ticket-table {
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      
+      .ticket-table tr {
+        margin-bottom: 10px;
+      }
+      
+      .ticket-table th {
+        text-align: left;
+      }
+      
+      .ticket-table th:nth-of-type(1) {
+        width: 38%;
+      }
+      
+      .ticket-table th:nth-of-type(2) {
+        width: 40%;
+      }
+      
+      .ticket-table th:nth-of-type(3) {
+        width: 15%;
+      }
+      
+      .ticket-table td {
+        width: 33%;
+        font-size: 26px;
+      }
+      
+      .info-table th {
+        color: rgb(63, 62, 62)
+      }
+      
+      .bigger {
+        font-size: 40px;
+      }
+      
+      .serial {
+        height: 10px;
+        background-color: rgb(243, 235, 235);
+      }
+      
+      .serial table {
+        border-collapse: collapse;
+      }
+      
+      .serial td {
+        width: 3px;
+        height: 25px;
+      }
+      
+      .numbers td {
+        font-size: 16px;
+        text-align: center;
+        color: rgb(63, 62, 62);
+      }
+</style>
+
+<body>
+
+    <div class="ticket">
+        <div class="holes-top"></div>
+        <div class="title">
+            <p class="cinema">Showtime Select</p>
+        </div>
+        <div class="poster">
+            <img src="img/leo-1.jpg"
+                alt="Movie: Only God Forgives" />
+        </div>
+        <div class="info">
+            <table>
+                <tr>
+                    <th>SCREEN</th>
+                    <th>ROW</th>
+                    <th>SEAT</th>
+                </tr>
+                <tr>
+                    <td class="bigger">18</td>
+                    <td class="bigger">H</td>
+                    <td class="bigger">24</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>PRICE</th>
+                    <th>DATE</th>
+                    <th>TIME</th>
+                </tr>
+                <tr>
+                    <td>Rs. 400.00</td>
+                    <td>4/13/21</td>
+                    <td>19:30</td>
+                </tr>
+            </table>
+        </div>
+        <!-- <div style="background-color: white;"> -->
+        <div class="holes-lower"></div>
+        <div class="serial">
+            <table class="barcode">
+                <tr>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                    <td style="background-color:black;"></td>
+                    <td style="background-color:white;"></td>
+                </tr>
+            </table>
+            <table class="numbers">
+                
+                <tr>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
